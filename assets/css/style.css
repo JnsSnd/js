@@ -895,147 +895,98 @@ section {
   opacity: 1;
 }
 
+
+
+
 /* CARD */
-.cardContainer {
-  
+/* Adjusted CSS based on HTML class names */
+.swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  /* Adjusted for mobile view */
-  padding: 20px;
-  /* Adjusted for mobile view */
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 480px; /* Set a maximum width to limit excess space */
 }
 
 .card {
   position: relative;
-  margin: .5% .5% .5% .5%;
-  width: 230px;
-  /* Default width for desktop */
-  height: 130px;
-  /* Default height for desktop */
-  background-color: #f2f2f2;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%; /* Fill the container width */
+  max-width: 450px; /* Set a maximum width for the card */
+  height: 250px; /* Fixed height */
+  color: #2e2d31;
+  background: #1e1e1e;
   overflow: hidden;
-  perspective: 1000px;
-  /* box-shadow: 0 0 0 5px #ffffff80; */
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 20px;
 }
 
-.card svg {
-  width: 48px;
-  fill: #333;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-}
-
-.card__image {
+.temporary_text img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Ensures the image covers the entire box */
-  border-radius: 10px;
-  /* Match the border radius of the card */
 }
 
-.card__content {
+
+.card_title {
+  font-weight: bold;
+}
+
+.card_content {
   position: absolute;
-  top: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
-  height: 100%;
   padding: 20px;
-  box-sizing: border-box;
-  /* From https://css.glass */
-  background: rgba(98, 98, 98, 0.49);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12.4px);
-  -webkit-backdrop-filter: blur(12.4px);
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  transform: rotateX(-90deg);
-  transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  display: flex;
-  /* Use flexbox */
-  justify-content: center;
-  /* Center horizontally */
-  align-items: center;
-  /* Center vertically */
-  text-align: center;
-}
-
-.card:hover .card__content {
-  transform: rotateX(0deg);
-}
-
-.card__title {
-  margin: 0;
-  font-size: 15px;
-  color: #333;
-  font-weight: 700;
-}
-
-.card:hover svg {
-  transform: scale(0);
-}
-
-.card__description {
-  margin: 10px 0 0;
-  font-size: 14px;
-  color: #777;
-  line-height: 1.4;
-}
-
-.card__title {
-  color: #000;
-  margin-top: 10px;
-  transition: color 0.3s ease;
-}
-
-.card__title:hover {
+  background: #1e1e1e;
   color: #ffffff;
-  /* Change to the desired hover color */
+  border-top-left-radius: 20px;
+  transform: translateY(150px);
+  transition: transform 0.25s;
 }
 
-/* Media Query for Mobile View */
-@media only screen and (max-width: 768px) {
-  .cardContainer {
-    padding: 10px;
-    /* Adjust padding for mobile view */
-  }
-
-  .card {
-    width: calc(100% - 50px);
-    /* Adjust width for mobile view */
-    height: 200px;
-    /* Adjust height for mobile view */
-  }
-
-  .card__content {
-    padding: 10px;
-    /* Adjust padding for mobile view */
-  }
-
-  .card__title {
-    font-size: 20px;
-    /* Adjust font size for mobile view */
-  }
-
-  .card__description {
-    font-size: 12px;
-    /* Adjust font size for mobile view */
-  }
+.card_content::before {
+  content: '';
+  position: absolute;
+  top: -47px;
+  right: -45px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-175deg);
+  border-radius: 50%;
+  box-shadow: inset 48px 48px #1e1e1e;
 }
 
+.card_title {
+  color: #ffffff;
+  line-height: 15px;
+}
+
+.card_subtitle {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.card_description {
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.card:hover .card_content {
+  transform: translateY(0);
+}
+
+.card:hover .card_description {
+  opacity: 1;
+  transition-delay: 0.25s;
+}
 
 
 /*--------------------------------------------------------------
