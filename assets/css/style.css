@@ -525,7 +525,8 @@ h6 {
 
 @media (max-width: 768px) {
   #hero {
-    background-position: 88% center; /* Adjust background position for mobile view */
+    background-position: 88% center;
+    /* Adjust background position for mobile view */
   }
 
   #hero h1 {
@@ -585,10 +586,11 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about{
+.about {
   margin-bottom: 90px;
   background-color: #121212;
 }
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
@@ -662,7 +664,8 @@ section {
 
 .img-wrapper {
   width: 100%;
-  height: 65%; /* Adjust as needed */
+  height: 65%;
+  /* Adjust as needed */
   position: relative;
 }
 
@@ -690,7 +693,7 @@ section {
   }
 }
 
-.textBox{
+.textBox {
   text-align: center;
 }
 
@@ -737,14 +740,17 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services{
+.services {
   margin-bottom: 120px;
   background-color: #121212;
 }
+
 .services .icon-box {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
   padding: 30px;
   position: relative;
   overflow: hidden;
@@ -752,12 +758,13 @@ section {
   background: #1e1e1e;
   box-shadow: 0 10px 29px 0 rgba(167, 167, 167, 0.1);
   transition: all 0.3s ease-in-out;
-  height: 200px; /* Adjust height as needed */
-  
+  height: 200px;
+  /* Adjust height as needed */
+
 }
 
 .services .icon-box:hover {
- 
+
   transform: translateY(-5px);
 }
 
@@ -798,9 +805,10 @@ section {
 /*--------------------------------------------------------------
 # Projects
 --------------------------------------------------------------*/
-.portfolio{
+.portfolio {
   background-color: #121212;
 }
+
 .portfolio #portfolio-flters {
   list-style: none;
   margin-bottom: 20px;
@@ -910,15 +918,20 @@ section {
   display: flex;
   justify-content: center;
   padding: 0;
-  margin: 0 auto; /* Center the container horizontally */
-  max-width: 480px; /* Set a maximum width to limit excess space */
+  margin: 0 auto;
+  /* Center the container horizontally */
+  max-width: 480px;
+  /* Set a maximum width to limit excess space */
 }
 
 .card {
   position: relative;
-  width: 100%; /* Fill the container width */
-  max-width: 450px; /* Set a maximum width for the card */
-  height: 250px; /* Fixed height */
+  width: 100%;
+  /* Fill the container width */
+  max-width: 450px;
+  /* Set a maximum width for the card */
+  height: 250px;
+  /* Fixed height */
   color: #2e2d31;
   background: #1e1e1e;
   overflow: hidden;
@@ -988,13 +1001,20 @@ section {
   transition-delay: 0.25s;
 }
 
+.viewMore {
+  position: relative;
+  font-size: 13px;
+  color: #808080;
+  margin-right: 20px;
+}
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact{
+.contact {
   background-color: #121212;
 }
+
 .contact .info {
   width: 100%;
   background-color: #121212;
