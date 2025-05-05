@@ -645,7 +645,120 @@ section {
   text-decoration: none;
 }
 
-/* SCHOOL CARD */
+/* Layout for About content */
+.row.content {
+  display: flex;
+  align-items: flex-start; /* Top align image and text */
+  gap: 30px;
+  padding: 20px;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Portrait image styling */
+.portrait-img {
+  width: 400px;
+  height: 400px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+/* Text container for heading + paragraph */
+.text-container {
+  margin-top: 3%;
+  flex: 1;
+  color: #f1f1f1;
+}
+
+/* Bio text styling */
+.bio-text {
+  font-size: 16px;
+  padding: 0 20% 0 0;
+  text-align: justify;
+  line-height: 1.7;
+  margin: 0 0 15px;
+}
+
+/* Heading styling */
+.bio-text-heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #f1f1f1;
+}
+
+/* Button */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.btn .icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* Green Button */
+.btn-primary {
+  background-color: #2DA56B;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #248d5a;
+}
+
+/* Outline Button */
+.btn-outline {
+  background-color: transparent;
+  border: 1.5px solid #aaa;
+  color: #eee;
+}
+
+.btn-outline:hover {
+  background-color: #eee;
+  color: #111;
+}
+
+/* Responsive fallback for very narrow screens */
+@media (max-width: 900px) {
+  .row.content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .portrait-img {
+    margin-bottom: 20px;
+  }
+
+  .text-container {
+    text-align: justify;
+  }
+
+  .bio-text {
+    padding-right: 0;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# School Card Section
+--------------------------------------------------------------*/
 .schoolCard {
   width: 220px;
   height: 285px;
@@ -665,7 +778,6 @@ section {
 .img-wrapper {
   width: 100%;
   height: 65%;
-  /* Adjust as needed */
   position: relative;
 }
 
@@ -676,8 +788,6 @@ section {
   transition: 0.2s ease-in-out;
   z-index: 1;
 }
-
-
 
 @keyframes anim {
   0% {
@@ -698,8 +808,26 @@ section {
 }
 
 
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .row.content {
+    flex-direction: column;
+    text-align: center;
+  }
 
+  .portrait-img {
+    margin: 0 auto 15px auto;
+  }
 
+  .bio-text {
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  .schoolCard {
+    max-width: 100%;
+  }
+}
 
 /*--------------------------------------------------------------
 # Clients
@@ -905,6 +1033,41 @@ section {
 
 
 
+/* SORTING */
+.sort-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sort-controls label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff; /* white text */
+}
+
+.sort-controls select {
+  padding: 5px 10px; /* smaller height */
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.sort-controls select:hover,
+.sort-controls select:focus {
+  border-color: #007BFF;
+  outline: none;
+  background-color: #fff;
+}
+
 
 /* CARD */
 /* Adjusted CSS based on HTML class names */
@@ -1008,6 +1171,113 @@ section {
   margin-right: 20px;
 }
 
+/* v2 */
+/* Container for Project Cards */
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align items to the left */
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start; /* Align items at the top of the container */
+  min-height: 100vh; /* Ensure the container takes full height of the viewport */
+}
+
+/* Modern Project Card Styling */
+.modern-project-card {
+  background: #1e1e1e;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 400px; /* Keep the card size fixed */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 20px; /* Space between cards */
+}
+
+/* Hover effects for the card */
+.modern-project-card:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Image styling inside the card */
+.project-image {
+  border-radius:10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Information section inside the card */
+.project-info {
+  padding: 11px;
+  transition: color 0.3s ease;
+}
+
+/* Project title styling */
+.project-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Tags inside the project card */
+.project-tags {
+  margin-top: 15px;
+}
+
+.project-tags span {
+  background: #333;
+  color: #ccc;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin: 4px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+/* Project link button styling */
+.project-link {
+  font-size: 12px;
+  text-decoration: none;
+  background: #1e1e1e;
+  color: #ccc;
+  padding: 10px 10px;
+  border-radius: 10px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-link:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Responsive Design: Adjusting for smaller screens */
+@media (max-width: 768px) {
+  .project-container {
+    justify-content: flex-start; /* Keep the cards aligned left */
+  }
+  .modern-project-card {
+    width: 45%; /* Adjust card width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-container {
+    justify-content: flex-start; /* Keep the cards aligned left */
+  }
+  .modern-project-card {
+    width: 100%; /* Full width on very small screens */
+  }
+}
+
+
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
@@ -1088,7 +1358,7 @@ section {
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #18d26e;
+  background: red;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1161,7 +1431,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: url("../img/bg.jpg") center center no-repeat;
+  /* background: url("../img/bg.jpg") center center no-repeat; */
   color: #fff;
   font-size: 14px;
   position: relative;
@@ -1297,3 +1567,7 @@ section {
     padding-top: 5px;
   }
 }
+
+
+
+

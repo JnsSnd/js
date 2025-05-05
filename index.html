@@ -35,8 +35,14 @@
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+  <!-- MODAL -->
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+
+
   <!-- Sweet Alert -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
   <style>
     @keyframes typewriter {
       0% {
@@ -68,7 +74,7 @@
 
       0%,
       50% {
-        content: "BACK END DEVELOPER";
+        content: "JR SOFTWARE DEVELOPER";
       }
 
       50.01%,
@@ -78,7 +84,7 @@
     }
 
     h2.typewriter::before {
-      content: "BACK END DEVELOPER";
+      content: "WEB DEVELOPER";
       display: inline-block;
       animation: switchText 12s infinite;
     }
@@ -108,7 +114,8 @@
       <h1 class="fade-in" id="myName">I'M JONAS SANDE</h1>
       <h2 class="typewriter"></h2>
       <a href="#about" class="btn-get-started scrollto">Get Started</a>
-      <a href="assets/Sande_Jonas_Resume.pdf" target="_blank" style="font-size: 15px; margin-top: 1%;">Download Resume</a>
+      <!-- <a href="assets/Sande_Jonas_Resume.pdf" target="_blank" style="font-size: 15px; margin-top: 1%;">Download
+        Resume</a> -->
     </div>
   </section>
   <!-- End Hero -->
@@ -127,7 +134,7 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#skills">Skills</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Projects</a></li>
+          <li><a class="nav-link scrollto " href="#project">Projects</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -156,25 +163,47 @@
         </div>
 
         <div class="row content">
-          <p style="text-align: center; font-size: 16px" data-aos="fade-up" data-aos-delay="100">
-            My name is Jonas Sande. I am 20 years old. I am a third-year student residing in Caloocan City, pursuing a
-            Bachelor of Science in Information Technology (BSIT). At the University of Caloocan City (South Campus). I'm
-            a kind, friendly, and amiable person who works best both in teams and alone since I like to establish and
-            achieve goals for myself. I also have a creative mind and am open to taking on new challenges. I
-            consistently plan ahead and maintain good organization to ensure that I make the best use of my time.
-          </p>
+          <img src="assets/img/toga.jpg" alt="Portrait of Jonas Sande" class="portrait-img" data-aos="fade-right"
+            data-aos-delay="100">
+
+          <div class="text-container" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="bio-text-heading">JONAS SANDE</h3>
+            <p class="bio-text">
+              I am a 21-year-old graduate with a Bachelor of Science in Information Technology (BSIT) from the
+              University of Caloocan City – South Campus. I am a motivated and approachable individual who thrives both
+              independently and in collaborative environments. Goal-oriented and proactive, I take pride in setting
+              clear objectives and working diligently to achieve them.
+              <br><br>
+              With a creative mindset and a willingness to embrace new challenges, I continuously seek opportunities to
+              grow and improve. I value effective time management and maintain strong organizational skills to ensure
+              productivity and quality in everything I do.
+            </p>
+
+            <div class="button-group">
+              <a href="#contact" class="btn btn-primary">
+                <span class="icon">🖂</span>
+                Contact Me
+              </a>
+              <a href="assets/Sande_Jonas_ResumeV4.pdf" download class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                Download CV
+              </a>
+            </div>
+
+          </div>
         </div>
+
 
         <br><br><br>
         <div class="section-title" data-aos="fade-up" data-aos-delay="200">
           <h2>Education</h2>
         </div>
+
         <div class="row content">
           <!-- ERES -->
           <div class="schoolCard" data-aos="fade-up" data-aos-delay="250">
             <div class="img-wrapper">
-              <a href="https://example.com">
-                <img src="assets/img/schoolLogo/eres.png" class="img" alt="Your Image" />
+              <a href="">
+                <img src="assets/img/schoolLogo/eres.png" class="img" alt="ERES Logo" />
               </a>
             </div>
             <div class="textBox">
@@ -186,8 +215,9 @@
           <!-- MCHS -->
           <div class="schoolCard" data-aos="fade-up" data-aos-delay="300">
             <div class="img-wrapper">
-              <a href="https://example.com">
-                <img src="assets/img/schoolLogo/mchs.png" class="img" alt="Your Image" />
+              <a href="https://www.facebook.com/p/Maria-Clara-HIgh-School-Caloocan-City-100063634405128/"
+                target="_blank" rel="noopener noreferrer">
+                <img src="assets/img/schoolLogo/mchs.png" class="img" alt="MCHS Logo" />
               </a>
             </div>
             <div class="textBox">
@@ -199,8 +229,8 @@
           <!-- SPCC -->
           <div class="schoolCard" data-aos="fade-up" data-aos-delay="400">
             <div class="img-wrapper">
-              <a href="https://example.com">
-                <img src="assets/img/schoolLogo/spcc.png" class="img" alt="Your Image" />
+              <a href="https://spcc.edu.ph" target="_blank" rel="noopener noreferrer">
+                <img src="assets/img/schoolLogo/spcc.png" class="img" alt="SPCC Logo" />
               </a>
             </div>
             <div class="textBox">
@@ -212,21 +242,20 @@
           <!-- UCC -->
           <div class="schoolCard" data-aos="fade-up" data-aos-delay="450">
             <div class="img-wrapper">
-              <a href="https://example.com">
-                <img src="assets/img/schoolLogo/ucc.png" class="img" alt="Your Image" />
+              <a href="https://ucc-caloocan.edu.ph" target="_blank" rel="noopener noreferrer">
+                <img src="assets/img/schoolLogo/ucc.png" class="img" alt="UCC Logo" />
               </a>
             </div>
             <div class="textBox">
               <br>
-              <p>U C C<br> 2021 - PRESENT</p>
+              <p>U C C<br> 2021 - 2025</p>
             </div>
           </div>
         </div>
 
       </div>
-
-      </div>
     </section><!-- End About Section -->
+
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
@@ -240,20 +269,21 @@
           <div class="col-lg-4 col-md-6">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="bi bi-code-slash" style="color: #f0f0f0;"></i></div>
-              <h4 class="title"><a href="">Web Development</a></h4>
+              <h4 class="title"><a href="#project">Web Development</a></h4>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="150">
               <div class="icon"><i class="bi bi-microsoft" style="color: #f0f0f0;"></i></div>
-              <h4 class="title"><a href="">Windows Application Development</a></h4>
+              <h4 class="title"><a href="#project">Windows Application Development</a></h4>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <div class="icon"><i class="bi bi-tools" style="color: #f0f0f0;"></i></div>
-              <h4 class="title"><a href="">Computer & Laptop Technician</a></h4>
+              <h4 class="title"><a href="https://www.facebook.com/lapter.19" target="_blank"
+                  rel="noopener noreferrer">Computer & Laptop Technician</a></h4>
             </div>
           </div>
         </div>
@@ -322,19 +352,29 @@
     </section><!-- End Clients Section -->
 
     <!-- ======= Projects Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <section id="project" class="project">
       <div class="container">
 
         <div class="section-title">
-          <h2 data-aos="fade-up">Projects</h2>
-          <p data-aos="fade-up" data-aos-delay="200" style="font-size: 16px;">These are my personal and academic
-            projects.</p>
+          <h2 data-aos="fade-up">Featured Projects</h2>
+          <!-- <p data-aos="fade-up" data-aos-delay="200" style="font-size: 16px;">These are my personal and academic
+            projects.</p> -->
+          <div class="sort-controls" data-aos="fade-up" data-aos-delay="200">
+            <label for="sortSelect"><strong>Sort by:</strong></label>
+            <select id="sortSelect">
+              <option value="All">All</option>
+              <option value="Capstone">Capstone</option>
+              <option value="Case Study">Case Study</option>
+              <option value="Personal">Personal</option>
+            </select>
+          </div>
+
         </div>
 
         <!-- CARD -->
-        <div class="cardContainer swiper-container" data-aos="fade-left" data-aos-delay="200">
+        <!-- <div class="cardContainer swiper-container" data-aos="fade-left" data-aos-delay="200">
           <div class="swiper-wrapper">
-            <!-- PROJECT 1 -->
+    
             <div class="swiper-slide cardOut">
               <article class="card">
                 <div class="temporary_text">
@@ -352,7 +392,7 @@
               </article>
             </div>
 
-            <!-- PROJECT 2 -->
+         
             <div class="swiper-slide cardOut">
               <article class="card">
                 <div class="temporary_text">
@@ -370,7 +410,7 @@
               </article>
             </div>
 
-            <!-- PROJECT 3 -->
+          
             <div class="swiper-slide cardOut">
               <article class="card">
                 <div class="temporary_text">
@@ -389,7 +429,7 @@
               </article>
             </div>
 
-            <!-- PROJECT 4 -->
+           
             <div class="swiper-slide cardOut">
               <article class="card">
                 <div class="temporary_text">
@@ -407,7 +447,7 @@
               </article>
             </div>
 
-            <!-- PROJECT 5 -->
+            
             <div class="swiper-slide cardOut">
               <article class="card">
                 <div class="temporary_text">
@@ -425,12 +465,172 @@
               </article>
             </div>
           </div>
-          <!-- Add Swiper pagination and navigation -->
-          <!-- <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div> -->
+        </div> -->
+
+        <!-- v2 -->
+        <div class="project-container">
+          <!-- FLOMOS -->
+          <div class="projectBox" data-category="Capstone" data-aos="fade-up" data-aos-delay="100">
+            <div class="modern-project-card">
+              <img src="assets/img/projLogo/flomos.png" alt="Project Image" class="project-image" />
+              <div class="project-info">
+                <h3 class="project-title">FLOMOS: Flood Monitoring System V3</h3>
+                <!-- <p class="project-description">Some project description here...</p> -->
+                <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Php</span>
+                  <span>MySql</span>
+                  <span>Arduino</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CHC -->
+          <div class="projectBox" data-category="Personal" data-aos="fade-up" data-aos-delay="150">
+            <div class="modern-project-card">
+              <img src="assets/img/projLogo/chc.png" alt="Project Image" class="project-image" />
+              <div class="project-info">
+                <h3 class="project-title">CHC: Cristy Homecare Corporation Official Website</h3>
+                <!-- <p class="project-description">Some project description here...</p> -->
+                <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VTECH -->
+          <div class="projectBox" data-category="Personal" data-aos="fade-up" data-aos-delay="200">
+            <div class="modern-project-card">
+              <img src="assets/img/projLogo/vtech.png" alt="Project Image" class="project-image" />
+              <div class="project-info">
+                <h3 class="project-title">VTech Ships Official Website</h3>
+                <!-- <p class="project-description">Some project description here...</p> -->
+                <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Php</span>
+                  <span>MySql</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CABLE BOSS -->
+          <div class="projectBox" data-category="Personal" data-aos="fade-up" data-aos-delay="250">
+            <div class="modern-project-card">
+              <img src="assets/img/projLogo/cb.png" alt="Project Image" class="project-image" />
+              <div class="project-info">
+                <h3 class="project-title">Online Time Keeping for Cable BOSS</h3>
+                <!-- <p class="project-description">Some project description here...</p> -->
+                <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Php</span>
+                  <span>MySql</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JC THAI -->
+          <div class="projectBox" data-category="Case Study" data-aos="fade-up" data-aos-delay="300">
+            <div class="modern-project-card">
+              <img src="assets/img/projLogo/jc.png" alt="Project Image" class="project-image" />
+              <div class="project-info">
+                <h3 class="project-title">Jc Thai Inventory Management System</h3>
+                <!-- <p class="project-description">Some project description here...</p> -->
+                <div class="project-tags">
+                  <span>Vb.Net</span>
+                  <span>MariaDb</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COFTEA -->
+          <div class="projectBox" data-category="Case Study" data-aos="fade-up" data-aos-delay="350">
+            <div class="modern-project-card">
+              <img src="assets/img/projLogo/coftea.png" alt="Project Image" class="project-image" />
+              <div class="project-info">
+                <h3 class="project-title">Coftea Computerized POS @ A. Mabini Branch </h3>
+                <!-- <p class="project-description">Some project description here...</p> -->
+                <div class="project-tags">
+                  <span>C#</span>
+                  <span>MariaDb</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BLACK APPAREL -->
+          <div class="projectBox" data-category="Case Study" data-aos="fade-up" data-aos-delay="400">
+            <div class="modern-project-card">
+              <img src="assets/img/projLogo/blk.png" alt="Project Image" class="project-image" />
+              <div class="project-info">
+                <h3 class="project-title">Order and Stock Management System for Black Apparel</h3>
+                <!-- <p class="project-description">Some project description here...</p> -->
+                <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Php</span>
+                  <span>MySql</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CORNER WHOOPS -->
+          <div class="projectBox" data-category="Case Study" data-aos="fade-up" data-aos-delay="450">
+            <div class="modern-project-card">
+              <img src="assets/img/projLogo/cornerWhoops.png" alt="Project Image" class="project-image" />
+              <div class="project-info">
+                <h3 class="project-title">Corner Whoops Arduino Powered Pay Parking Management System</h3>
+                <!-- <p class="project-description">Some project description here...</p> -->
+                <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Php</span>
+                  <span>MySql</span>
+                  <span>Arduino</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PDM -->
+          <div class="projectBox" data-category="Case Study" data-aos="fade-up" data-aos-delay="500">
+            <div class="modern-project-card">
+              <img src="assets/img/projLogo/pdm.png" alt="Project Image" class="project-image" />
+              <div class="project-info">
+                <h3 class="project-title">PDM: Pambayang Dalubhasan ng Marilao Online Voting System </h3>
+                <!-- <p class="project-description">Some project description here...</p> -->
+                <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Php</span>
+                  <span>MySql</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
+
+
+
+
     </section><!-- End Portfolio Section -->
 
 
@@ -458,13 +658,12 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>sandejonas.bsit@gmail.com</p>
+                <p>jnssnd.work@gmail.com</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>09336609682</p>
                 <p>09942339256</p>
               </div>
 
@@ -494,7 +693,8 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" style="background-color: #42a367;">Send Message</button>
+              </div>
             </form>
 
           </div>
@@ -589,6 +789,40 @@
   <script>
     AOS.init();
   </script>
+
+  <!-- Porject Sorting -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.querySelector(".project-container");
+      const allProjects = Array.from(container.querySelectorAll(".projectBox"));
+      const sortSelect = document.getElementById("sortSelect");
+
+      function sortAndRender(category) {
+        // Clear the container
+        container.innerHTML = "";
+
+        let filteredProjects;
+
+        if (category === "All") {
+          filteredProjects = allProjects;
+        } else {
+          filteredProjects = allProjects.filter(project => project.dataset.category === category);
+        }
+
+        // Re-append sorted or filtered items
+        filteredProjects.forEach(project => container.appendChild(project));
+      }
+
+      // Default load (Capstone)
+      sortAndRender("All");
+
+      // On change
+      sortSelect.addEventListener("change", (e) => {
+        sortAndRender(e.target.value);
+      });
+    });
+  </script>
+
 
 </body>
 
