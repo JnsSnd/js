@@ -35,9 +35,9 @@
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-  <!-- MODAL -->
-  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 
+  <!-- Tingle.js CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/tingle.js@0.15.3/dist/tingle.min.css">
 
   <!-- Sweet Alert -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -184,7 +184,8 @@
                 <span class="icon">🖂</span>
                 Contact Me
               </a>
-              <a href="assets/Sande_Jonas_ResumeV4.pdf" download class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+              <a href="assets/Sande_Jonas_ResumeV4.pdf" download class="btn btn-outline" target="_blank"
+                rel="noopener noreferrer">
                 Download CV
               </a>
             </div>
@@ -370,7 +371,6 @@
           </div>
 
         </div>
-
         <!-- CARD -->
         <!-- <div class="cardContainer swiper-container" data-aos="fade-left" data-aos-delay="200">
           <div class="swiper-wrapper">
@@ -469,8 +469,9 @@
 
         <!-- v2 -->
         <div class="project-container">
+
           <!-- FLOMOS -->
-          <div class="projectBox" data-category="Capstone" data-aos="fade-up" data-aos-delay="100">
+          <div class="projectBox" data-category="Capstone" data-aos="fade-up" data-aos-delay="100" data-id="flomos">
             <div class="modern-project-card">
               <img src="assets/img/projLogo/flomos.png" alt="Project Image" class="project-image" />
               <div class="project-info">
@@ -489,7 +490,7 @@
           </div>
 
           <!-- CHC -->
-          <div class="projectBox" data-category="Personal" data-aos="fade-up" data-aos-delay="150">
+          <div class="projectBox" data-category="Personal" data-aos="fade-up" data-aos-delay="150" data-id="chc">
             <div class="modern-project-card">
               <img src="assets/img/projLogo/chc.png" alt="Project Image" class="project-image" />
               <div class="project-info">
@@ -505,7 +506,7 @@
           </div>
 
           <!-- VTECH -->
-          <div class="projectBox" data-category="Personal" data-aos="fade-up" data-aos-delay="200">
+          <div class="projectBox" data-category="Personal" data-aos="fade-up" data-aos-delay="200" data-id="vtech">
             <div class="modern-project-card">
               <img src="assets/img/projLogo/vtech.png" alt="Project Image" class="project-image" />
               <div class="project-info">
@@ -523,7 +524,7 @@
           </div>
 
           <!-- CABLE BOSS -->
-          <div class="projectBox" data-category="Personal" data-aos="fade-up" data-aos-delay="250">
+          <div class="projectBox" data-category="Personal" data-aos="fade-up" data-aos-delay="250" data-id="cb">
             <div class="modern-project-card">
               <img src="assets/img/projLogo/cb.png" alt="Project Image" class="project-image" />
               <div class="project-info">
@@ -541,7 +542,7 @@
           </div>
 
           <!-- JC THAI -->
-          <div class="projectBox" data-category="Case Study" data-aos="fade-up" data-aos-delay="300">
+          <div class="projectBox" data-category="Case Study" data-aos="fade-up" data-aos-delay="300" data-id="jc">
             <div class="modern-project-card">
               <img src="assets/img/projLogo/jc.png" alt="Project Image" class="project-image" />
               <div class="project-info">
@@ -556,7 +557,7 @@
           </div>
 
           <!-- COFTEA -->
-          <div class="projectBox" data-category="Case Study" data-aos="fade-up" data-aos-delay="350">
+          <div class="projectBox" data-category="Case Study" data-aos="fade-up" data-aos-delay="350" data-id="coftea">
             <div class="modern-project-card">
               <img src="assets/img/projLogo/coftea.png" alt="Project Image" class="project-image" />
               <div class="project-info">
@@ -571,7 +572,7 @@
           </div>
 
           <!-- BLACK APPAREL -->
-          <div class="projectBox" data-category="Case Study" data-aos="fade-up" data-aos-delay="400">
+          <div class="projectBox" data-category="Case Study" data-aos="fade-up" data-aos-delay="400" data-id="blk">
             <div class="modern-project-card">
               <img src="assets/img/projLogo/blk.png" alt="Project Image" class="project-image" />
               <div class="project-info">
@@ -589,7 +590,7 @@
           </div>
 
           <!-- CORNER WHOOPS -->
-          <div class="projectBox" data-category="Case Study" data-aos="fade-up" data-aos-delay="450">
+          <div class="projectBox" data-category="Case Study" data-aos="fade-up" data-aos-delay="450" data-id="corner">
             <div class="modern-project-card">
               <img src="assets/img/projLogo/cornerWhoops.png" alt="Project Image" class="project-image" />
               <div class="project-info">
@@ -608,7 +609,7 @@
           </div>
 
           <!-- PDM -->
-          <div class="projectBox" data-category="Case Study" data-aos="fade-up" data-aos-delay="500">
+          <div class="projectBox" data-category="Case Study" data-aos="fade-up" data-aos-delay="500" data-id="pdm">
             <div class="modern-project-card">
               <img src="assets/img/projLogo/pdm.png" alt="Project Image" class="project-image" />
               <div class="project-info">
@@ -821,6 +822,146 @@
         sortAndRender(e.target.value);
       });
     });
+  </script>
+
+  <!-- MODAL -->
+
+  <!-- Tingle.js JavaScript -->
+  <script src="https://unpkg.com/tingle.js@0.15.3/dist/tingle.min.js"></script>
+  <!-- Include Tingle JS -->
+  <script src="https://unpkg.com/tingle.js@0.15.3/dist/tingle.min.js"></script>
+
+  <!-- Your modal content JS -->
+  <script>
+    const modalContentMap = {
+      flomos: {
+        title: "FLOMOS: Flood Monitoring System V3ASD",
+        description: "A real-time flood monitoring and alert system using Arduino, PHP, and MySQL with responsive web interface.",
+        features: [
+          "Arduino-based water level detection",
+          "Real-time alerts",
+          "Responsive web dashboard",
+          "Database integration with MySQL"
+        ],
+        video: "assets/videos/flomos.mp4",
+        image: "assets/img/projLogo/flomos.png"
+      },
+      chc: {
+        title: "CHC: Cristy Homecare Corporation",
+        description: "Official website for Cristy Homecare Corporation with company info, services, and contact form.",
+        features: [
+          "Responsive web design",
+          "Company information",
+          "Contact form integration"
+        ],
+        video: "assets/videos/chc.mp4",
+        image: "assets/img/projLogo/chc.png"
+      },
+      vtech: {
+        title: "VTech Ships Official Website",
+        description: "Business website for VTech shipping services with a responsive design and service showcase.",
+        features: [
+          "Mobile-friendly layout",
+          "Service listing",
+          "Clean navigation"
+        ],
+        video: "assets/videos/vtech.mp4",
+        image: "assets/img/projLogo/vtech.png"
+      },
+      cb: {
+        title: "Cable BOSS Time Keeping System",
+        description: "Online employee time tracking system with database management using PHP and MySQL.",
+        features: [
+          "Web-based time tracking",
+          "Secure login",
+          "MySQL backend"
+        ],
+        video: "assets/videos/cb.mp4",
+        image: "assets/img/projLogo/cb.png"
+      },
+      jc: {
+        title: "JC Thai Inventory Management System",
+        description: "Inventory system for JC Thai built with VB.Net and MariaDB for streamlined item tracking.",
+        features: [
+          "Windows desktop app",
+          "VB.Net GUI",
+          "MariaDB integration"
+        ],
+        video: "assets/videos/jc.mp4",
+        image: "assets/img/projLogo/jc.png"
+      },
+      coftea: {
+        title: "Coftea POS - A. Mabini Branch",
+        description: "A computerized point-of-sale system developed in C# with MariaDB backend for beverage store.",
+        features: [
+          "POS interface",
+          "Inventory tracking",
+          "Sales reporting"
+        ],
+        video: "assets/videos/coftea.mp4",
+        image: "assets/img/projLogo/coftea.png"
+      },
+      blk: {
+        title: "Black Apparel Management System",
+        description: "Order and stock management system for a local apparel brand built using PHP and MySQL.",
+        features: [
+          "Order tracking",
+          "Stock management",
+          "Product catalog"
+        ],
+        video: "assets/videos/blk.mp4",
+        image: "assets/img/projLogo/blk.png"
+      },
+      corner: {
+        title: "Corner Whoops Pay Parking System",
+        description: "Arduino-powered pay parking management system integrated with a web backend for tracking.",
+        features: [
+          "Arduino parking sensor",
+          "Payment tracking",
+          "Web dashboard"
+        ],
+        video: "assets/videos/corner.mp4",
+        image: "assets/img/projLogo/cornerWhoops.png"
+      },
+      pdm: {
+        title: "PDM Online Voting System",
+        description: "Online voting platform for Pambayang Dalubhasan ng Marilao students with secure login and results.",
+        features: [
+          "Student authentication",
+          "Vote submission",
+          "Real-time result display"
+        ],
+        video: "assets/videos/pdm.mp4",
+        image: "assets/img/projLogo/pdm.png"
+      }
+    };
+
+    const modal = new tingle.modal({
+      closeMethods: ['overlay', 'button'],
+      closeLabel: "", // Hides the "X" icon
+      cssClass: ['custom-modal'],
+    });
+
+    document.querySelectorAll('.projectBox').forEach(box => {
+      box.addEventListener('click', () => {
+        const projectId = box.querySelector('img').src.split('/').pop().split('.')[0];
+        const content = modalContentMap[projectId];
+        if (content) {
+          modal.setContent(`
+        <h2>${content.title}</h2>
+        <p><strong>Description:</strong> ${content.description}</p>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+          ${content.features.map(f => `<li>${f}</li>`).join('')}
+        </ul>
+        <video src="${content.video}" controls style="width:100%;margin:15px 0;"></video>
+        <img src="${content.image}" alt="${content.title}" style="width:100%;border-radius:8px;" />
+      `);
+          modal.open();
+        }
+      });
+    });
+
   </script>
 
 
